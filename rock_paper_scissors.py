@@ -1,7 +1,10 @@
 import random
+import tkinter as tk
 from tkinter import *
 
 user_choice = ""
+
+
 def get_my_input_value():
     computer_move = random.randrange(1, 4)
     if computer_move == 1:
@@ -11,8 +14,7 @@ def get_my_input_value():
     elif computer_move == 3:
         computer_move = "scissors"
     my_label2 = Label(screen, text="the computer chose: " + computer_move)
-    my_label2.pack()
-
+    my_label2.place(relx=0.5, rely=0.7)
 
     user_choice = my_entry_box.get()
     if user_choice == computer_move:
@@ -44,22 +46,24 @@ def get_my_input_value():
         my_label10.pack()
 
 
-    
-    
-
 screen = Tk()
+screen.title('rock paper scissors')
 screen.geometry("800x400")
-screen.configure(bg="black")
+screen.configure(bg="black", cursor="cross")
 
-my_entry_box = Entry(screen, justify="right")
-my_entry_box.pack()
+my_image = PhotoImage(file="Desktop/catpng.png")
+my_label = Label(image=my_image, cursor="clock")
+my_label.place(relx=.1, rely=.2)
 
-my_label = Label(screen, text="Type rock paper or scissors.", font=("Arial", 25))
-my_label.place(x=10, y=11)
-my_label.pack()
+my_entry_box = Entry(screen, border=1, cursor="spider")
+my_entry_box.place(relx=.5, rely=.5)
 
-my_button = Button(screen, height=10, width=10, text="click", command=get_my_input_value)
-my_button.place(x=4, y=120)
+my_label = Label(screen, text="Type rock paper or scissors.", font=("Arial", 25), cursor="heart", padx=20, pady=15,
+                 bg="red")
+my_label.place(relx=0.5, rely=0.8)
 
+my_button = Button(screen, height=10, width=10, bg='#ffb3fe', text="click", command=get_my_input_value, cursor="star")
+my_button.pack()
 
 screen.mainloop()
+
