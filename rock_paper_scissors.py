@@ -5,7 +5,6 @@ import tkinter as tk
 from tkinter import *
 
 
-# I just edited this file
 def get_my_input_value():
     computer_move = random.randrange(1, 4)
     if computer_move == 1:
