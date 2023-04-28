@@ -1,12 +1,9 @@
+# Jason Rodriguez
+
 import random
 import tkinter as tk
 from tkinter import *
 
-<<<<<<< Updated upstream
-print("Hello, world!")
-=======
-# I just edited this file
->>>>>>> Stashed changes
 
 def get_my_input_value():
     computer_move = random.randrange(1, 4)
