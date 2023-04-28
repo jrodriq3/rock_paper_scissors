@@ -2,7 +2,7 @@ import random
 import tkinter as tk
 from tkinter import *
 
-
+print("Hello, world!")
 
 def get_my_input_value():
     computer_move = random.randrange(1, 4)
